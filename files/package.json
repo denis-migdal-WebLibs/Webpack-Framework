@@ -27,6 +27,7 @@
         "fork-ts-checker-webpack-plugin": "^9.0.2",
         "highlight": "^0.2.4",
         "swc-loader": "^0.2.6",
+        "@swc/core": "^1.15.18",
         "html-loader": "^5.1.0",
         "mini-css-extract-plugin": "^2.9.0",
         "css-loader": "^7.1.2",
