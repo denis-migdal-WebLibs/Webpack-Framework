@@ -1,3 +1,5 @@
+import webpack from 'webpack';
+
 import copyAssets  from './copyAssets.js';
 import pageEntries from './entries.js';
 
@@ -29,7 +31,11 @@ export default function (src, dst, rules = [], options = {}) {
 			},
 		},
 		target: "web",
-        plugins: [/*{
+        plugins: [
+			new webpack.DefinePlugin({
+				__DEBUG__: options.mode !== "production"
+			}),
+			/*{
             apply: (compiler) => {
                 compiler.hooks.compile.tap("MyPlugin_compile", () => {
                 	genCoreModuleList();
