@@ -6,19 +6,16 @@ export default function(config, src, _, {ROOT, alias}) {
 	config.module.rules.push(
 		{
 			test: /\.tsx?$/,
+			exclude: [ /node_modules/ ],
 			use: [{
-					// awesome-typescript-loader ?
-					//loader: 'ts-loader',
+					// emission quicker than 'ts-loader'.
 					loader: 'swc-loader',
 					options: {
 						jsc: {
 							"target": "esnext",
 						},
-						//transpileOnly: true, // Build time : 20sec to 10sec...
-						//experimentalWatchApi: true,
 					},
-				},],
-			exclude: [ /node_modules/ ]
+			},],
 		},
 		// raw loading...
 		{

@@ -4,8 +4,7 @@ import {isEntry} from "./helpers.js";
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
 export default function (config, src, dst) {
-
-    // optimize ? [MiniCssExtractPlugin.loader, 'css-loader', css_purge] : 
+ 
 	config.module.rules.push({
 		test  : /\.css$/,
 		issuer: isEntry,
