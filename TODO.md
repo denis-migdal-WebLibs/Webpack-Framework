@@ -1,2 +1,2 @@
 - custom loader to emit entries ?
-- 
+    - tester si type asset/ressource ne fonctionne pas avec un custom loader.

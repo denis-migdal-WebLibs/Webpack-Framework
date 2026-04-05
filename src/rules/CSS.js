@@ -19,7 +19,7 @@ export default function (config, src, dst) {
 				loader: 'css-loader',
 				options: {
 					url: false, // do not resolve URL.
-					//exportType: 'string'
+					//exportType: 'css-style-sheet'
 				}
 			}
         ]
