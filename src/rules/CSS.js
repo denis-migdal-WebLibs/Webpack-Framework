@@ -10,11 +10,11 @@ export default function (config, src, dst) {
 		test  : /\.css$/,
 		issuer: isEntry,
 		use: [
-            MiniCssExtractPlugin.loader,
+            MiniCssExtractPlugin.loader, // necessary to produce the file from the result of css-loader
             {
 				loader: 'css-loader',
 				options: {
-					url: false
+					url: false // do not resolve URL.
 				}
 			}
         ]
