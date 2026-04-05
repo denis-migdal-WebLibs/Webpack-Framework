@@ -8,12 +8,18 @@ export default function (config, src, dst) {
 	config.module.rules.push({
 		test  : /\.css$/,
 		issuer: isEntry,
+		// requires custom loader...
+		/*type: 'asset/resource', // émet le CSS comme fichier
+        generator: {
+          filename: 'test.css'
+        },*/
 		use: [
             MiniCssExtractPlugin.loader, // necessary to produce the file from the result of css-loader
             {
 				loader: 'css-loader',
 				options: {
-					url: false // do not resolve URL.
+					url: false, // do not resolve URL.
+					//exportType: 'string'
 				}
 			}
         ]
