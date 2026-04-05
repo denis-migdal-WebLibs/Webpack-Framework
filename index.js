@@ -3,7 +3,13 @@ import {glob, globSync} from 'glob';
 import fs    from 'fs';
 
 import * as RULES from './src/rules/index.js';
-const rules = [RULES.Typescript, RULES.Images, RULES.CSS, RULES.HTML, RULES.Markdown]; //TODO: auto build.
+const rules = [
+        RULES.Typescript,
+        //RULES.Images,
+        RULES.CSS,
+        RULES.HTML,
+        //RULES.Markdown
+    ]; //TODO: auto build.
 
 export default function buildConfigs(src, dst, alias) { //TODO: multiple named target.
 

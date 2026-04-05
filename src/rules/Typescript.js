@@ -3,22 +3,31 @@ import ForkTsCheckerNotifierWebpackPlugin from 'fork-ts-checker-notifier-webpack
 
 export default function(config, src, _, {ROOT, alias}) {
 
-	config.module.rules.push({
-		test: /\.tsx?$/,
-		use: [{
-				// awesome-typescript-loader ?
-				//loader: 'ts-loader',
-				loader: 'swc-loader',
-				options: {
-					jsc: {
-						"target": "esnext",
+	config.module.rules.push(
+		{
+			test: /\.tsx?$/,
+			use: [{
+					// awesome-typescript-loader ?
+					//loader: 'ts-loader',
+					loader: 'swc-loader',
+					options: {
+						jsc: {
+							"target": "esnext",
+						},
+						//transpileOnly: true, // Build time : 20sec to 10sec...
+						//experimentalWatchApi: true,
 					},
-					//transpileOnly: true, // Build time : 20sec to 10sec...
-					//experimentalWatchApi: true,
-				},
-			},],
-		exclude: [ /node_modules/ ]
-	});
+				},],
+			exclude: [ /node_modules/ ]
+		},
+		// raw loading...
+		{
+			//TODO: minify (?).
+			test  : /\.(html|css)$/,
+			issuer: /\.ts$/,
+			type  : 'asset/source',
+		}
+	);
 
 	config.plugins.push(
 		new ForkTsCheckerWebpackPlugin({

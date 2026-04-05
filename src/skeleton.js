@@ -33,7 +33,8 @@ export default function (src, dst, rules = [], options = {}) {
 		target: "web",
         plugins: [
 			new webpack.DefinePlugin({
-				__DEBUG__: options.mode !== "production"
+				__DEBUG__      : options.mode !== "production",
+				__LOAD_FILE__  : "require"
 			}),
 			/*{
             apply: (compiler) => {
