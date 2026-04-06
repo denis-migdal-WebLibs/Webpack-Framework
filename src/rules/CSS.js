@@ -15,6 +15,11 @@ export default function (config, src, dst) {
         },*/
 		use: [
             MiniCssExtractPlugin.loader, // necessary to produce the file from the result of css-loader
+			/**
+			{
+				loader: "./build/WebpackFramework/src/loaders/test.js"
+			},
+			/**/
             {
 				loader: 'css-loader',
 				options: {
