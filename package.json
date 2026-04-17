@@ -1,16 +1,18 @@
 {
   "type": "module",
   "devDependencies": {
-    "@swc/core": "^1.13.5",
-    "bundle-declarations-webpack-plugin": "^6.0.0",
+    "webpack": "^5.106.2",
+    "webpack-cli": "^7.0.2",
     "copy-webpack-plugin": "^14.0.0",
+    "glob": "^13.0.6",
+
+    "css-loader": "^7.1.2",
+    "mini-css-extract-plugin": "^2.9.0",
+    
+    "swc-loader": "^0.2.6",
+    "@swc/core": "^1.15.18",
     "fork-ts-checker-notifier-webpack-plugin": "^9.0.0",
     "fork-ts-checker-webpack-plugin": "^9.0.2",
-    "glob": "^13.0.6",
-    "mini-css-extract-plugin": "^2.9.0",
-    "swc-loader": "^0.2.6"
-  },
-  "dependencies": {
-    "webpack-cli": "^7.0.2"
+    "bundle-declarations-webpack-plugin": "^6.0.0"
   }
 }

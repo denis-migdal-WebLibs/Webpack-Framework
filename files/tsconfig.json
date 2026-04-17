@@ -13,9 +13,10 @@
         "erasableSyntaxOnly": true,
         "allowJs"           : true,
         "resolveJsonModule" : true,
+        "moduleResolution"  : "bundler",
+        "moduleDetection"   : "force",
         "target"            : "esnext",
         "module"            : "esnext",
-        "moduleResolution"  : "node",
 
         "strict": true,
 

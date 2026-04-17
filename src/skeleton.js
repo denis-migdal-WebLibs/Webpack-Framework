@@ -49,7 +49,7 @@ export default function (src, dst, rules = [], options = {}) {
 			ignored: [	'**/node_modules',
 						'**/.git' ]
 		},
-		devtool: "source-map", //"source-map"
+		devtool: "source-map",
 		stats: {
  			"errorDetails": true
 		},
@@ -57,6 +57,9 @@ export default function (src, dst, rules = [], options = {}) {
 			//concatenateModules: false,
 			//providedExports: false // issues in production ?
 		},
+		resolve: {
+			tsconfig: true
+		}
 	};
 
 	for(let rule of rules)
