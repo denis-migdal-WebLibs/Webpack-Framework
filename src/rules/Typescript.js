@@ -42,6 +42,7 @@ export default function(config, src, _, {ROOT, alias}) {
 			ROOT,
 			'node_modules',
 		],
+		tsconfig: `${ROOT}/tsconfig.json`,
 		alias,
 		fallback: {
             "fs"    : false,
