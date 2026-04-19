@@ -75,5 +75,6 @@ export default function(config, src, _, {ROOT, alias}) {
 	}
 
 	//TODO: .d.ts bundle
-
+	// outil externe (?).
+	// tsup src/index.ts --dts --emitDeclarationOnly ?
 };
