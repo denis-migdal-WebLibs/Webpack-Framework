@@ -6,6 +6,7 @@
         "outDir": "./build/TS",
         "paths": {},
         "incremental"      : true,
+        "declaration"      : true,
         "noErrorTruncation": true,
 
         "sourceMap"         : true,

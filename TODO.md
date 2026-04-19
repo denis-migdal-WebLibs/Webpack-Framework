@@ -10,3 +10,4 @@
 - remove: `"allowSyntheticDefaultImports": true`,
 - added: `"erasableSyntaxOnly": true`,
 - added: `"noUncheckedSideEffectImports": true`
+- added: `"declaration": true` => try to be compatible as much as possible (to have decl. merge).
