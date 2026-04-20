@@ -6,10 +6,7 @@
 
 - /tests : own configuration
 
-## ---------------
-
-- custom loader to emit entries ?
-    - tester si type asset/ressource ne fonctionne pas avec un custom loader.
+- plugin to emit lists (that can then be used by indexes).
 
 ## TS config
 
@@ -22,7 +19,7 @@
 - added: `"noUncheckedSideEffectImports": true`
 - added: `"declaration": true` => try to be compatible as much as possible (to have decl. merge).
 
-
+## Markdown
 
 Avoid using markdown.
 
