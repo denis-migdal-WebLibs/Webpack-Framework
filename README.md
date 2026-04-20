@@ -49,6 +49,8 @@ Special directories/files:
 
 The `src/libs/` directory is used to define libraries. Each `index.ts` files correspond to a library.
 
+💡 We recommend to use `src/libs/tests` for test libraries.
+
 ## Tests
 
 The `tests/` directory is used to define tests.
