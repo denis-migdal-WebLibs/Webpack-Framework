@@ -2,66 +2,37 @@
   <h1>Webpack Framework</h1>
 
   <p>Use Webpack without worrying about configurations.</p>
-  
-  <p style="color:red">This is an alpha version (2024/07/27), please wait few days for documentation and a more stable version.</p>
-  
-  <p>I am currently redesigning it (old version in old directory).</p>
 </div>
 
 ## Usage
 
-### Initialise a new repository :
+### Use WebpackFramework in a new project:
 
-1. Create your new repository:<br/>
-   `git init` or `git clone ... && cd ...`
-2. Add Webpack-Framework:<br/>
-   `git submodule add git@github.com:denis-migdal/Webpack-Framework.git ./build/WebpackFramework`<br/>
-   💡 Alternatively, you can also use a symbolic link :<br/>
-   `mkdir ./build && ln -s ... ./build/WebpackFramework`
-3. Initialize the new repository:<br/>
-   `./build/WebpackFramework/init.sh`
-4. Complete informations in `package.json`.<br/>
-
-⚠ May need to npm update ( npm install @swc/core )
-
-⚠ .vscode + .github missing
-
-⚠ markdown-loader is currently bugged, `markdown-loader/src/loader.js` needs to be :
-
-```javascript
-/* eslint-disable @babel/no-invalid-this */
-import {parse, use} from "marked";
-
-const extensions = [];
-
-export function markdownLoader(markdown) {
-  const options = this.getOptions();
-
-  for(let extension of options.extensions) {
-    if( extensions.includes(extension) )
-      break;
-
-    use(extension);
-    extensions.push(extension);
-  }
-
-  return parse(markdown, options.options);
-}
+In your project's git repository, install and initialize <i>Webpack Framework</i>:
+```bash
+git submodule add git@github.com:denis-migdal/Webpack-Framework.git ./build/WebpackFramework
+./build/WebpackFramework/init.sh
 ```
 
-### Configuration
+You can then complete the informations in the `package.json` file.
 
-Webpack is configured through `webpack.config.js`.
+💡 A a security measure, your existing files will NOT be overridden. Therefore, you may need to install some of the template files yourself.
 
-[TODO] config
+⚠ You may need to run `npm install @swc/core`.
+
+### Commands
+
+- TODO: ...
+
+### Template
+
+- TODO: describe files (+ entries/assets rules + recommendations).
+
+### Symbols
+
+- `__DEBUG__`: `true` if built in dev mode.
+- `__LOAD_FILE__`: an alias to `require()` used to import raw files.
 
 ## Projects using WebpackFramework
 
-### My projects
-
-[TODO] update
-
-## TODOLIST
-
-- [ ] Add examples
-- [ ] Only install required deps depending on the project...
+[TODO] link to MWL.

@@ -1,12 +1,13 @@
 {
     "include": ["src"],
-    "exclude": ["src/tests"],
     "compilerOptions": {
 
         "outDir": "./build/TS",
-        "paths": {},
+        "paths": {
+            "@/*": ["src/*"],
+        },
         "incremental"      : true,
-        "declaration"      : true,
+        "declaration"      : false,
         "noErrorTruncation": true,
 
         "sourceMap"         : true,

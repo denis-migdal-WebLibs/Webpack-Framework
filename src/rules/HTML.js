@@ -1,4 +1,4 @@
-import {isEntry} from "./helpers.js";
+import {isEntry} from "./core/helpers.js";
 
 export default function(config, src) {
 

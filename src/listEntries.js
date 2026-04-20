@@ -1,19 +1,14 @@
 import {glob, globSync} from 'glob';
 import fs from 'fs';
 
-export default function(src) {
+export default function listEntries(src) {
 
     return async () => {
 
         const entries = {};
 
-        // main entry (TODO: remove/rename?)
-        const main_files = await glob(`${src}/index.*`, {dotRelative: true});
-        if(main_files.length)
-            entries.main = main_files;
-
         // pages entries
-        const files = await glob(src + '/pages/**/index.{ts,html,md,css}', {dotRelative: true});
+        const files = await glob(src + '/pages/**/index.{ts,html,css}', {dotRelative: true});
 
         for(let file of files) {
 
@@ -24,7 +19,7 @@ export default function(src) {
                 entry = entries[entry_name]= { import: []};
 
             const isSkeleton = entry_name.startsWith("skeleton");
-            const isWebPage  = file.endsWith('.html') || file.endsWith('.md');
+            const isWebPage  = file.endsWith('.html');
             
             if( isWebPage && ! isSkeleton) {
 

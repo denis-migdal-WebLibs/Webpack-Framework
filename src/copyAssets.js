@@ -1,4 +1,3 @@
-// Only works with npm run (why ???)
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 
 export default function(config, list) {

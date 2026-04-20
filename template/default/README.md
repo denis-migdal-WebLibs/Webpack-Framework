@@ -1,7 +1,7 @@
 <div align="center">
   <h1>[PROJECT TITLE]</h1>
 
-  <p>[Project description</p>
+  <p>[Project description]</p>
 </div>
 
 ## Build

@@ -1,4 +1,4 @@
-import {isEntry} from "./helpers.js";
+import {isEntry} from "./core/helpers.js";
 
 /* const CssMinimizerPlugin = require('css-minimizer-webpack-plugin'); */
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';

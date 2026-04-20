@@ -1,7 +1,7 @@
 import webpack from 'webpack';
 
 import copyAssets  from './copyAssets.js';
-import pageEntries from './entries.js';
+import pageEntries from './listEntries.js';
 
 //import { library } from 'webpack';
 //const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
@@ -19,7 +19,7 @@ export default function (src, dst, rules = [], options = {}) {
 		module: {
 			rules: [],
 		},
-		entry: pageEntries(src, dst),
+		entry: options.entries,
 		output: {
 			path: `${ROOT}/${dst}`,
 			publicPath: '',
@@ -56,9 +56,6 @@ export default function (src, dst, rules = [], options = {}) {
 		optimization: {
 			//concatenateModules: false,
 			//providedExports: false // issues in production ?
-		},
-		resolve: {
-			tsconfig: true
 		}
 	};
 

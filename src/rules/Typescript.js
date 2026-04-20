@@ -73,8 +73,4 @@ export default function(config, src, _, {ROOT, alias}) {
 		//let worker_name = runtime.slice(WORKER_PREFIX.length);
 		//return `${workers[worker_name][1]}/index.js`;
 	}
-
-	//TODO: .d.ts bundle
-	// outil externe (?).
-	// tsup src/index.ts --dts --emitDeclarationOnly ?
 };
