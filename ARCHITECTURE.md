@@ -18,4 +18,4 @@ Files:
 - `buildConfig.js`: build a Webpack configuration.
 - `listEntries.js`: list the ressources (libs, pages).
 - `listAssets.js`: list the assets to include in the distribution.
-- `copyAssets.js` -> rename ? + add search assets ?
+- `copyAssets.js`

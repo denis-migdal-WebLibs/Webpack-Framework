@@ -1,9 +1,8 @@
 import buildConfig from './src/buildConfig.js';
-import listAssets  from './src/listAssets.js';
-
-import * as RULES from './src/rules/index.js';
 import listAssets from './src/listAssets.js';
 import listEntries from './src/listEntries.js';
+import * as RULES from './src/rules/index.js';
+
 const rules = [
         RULES.Typescript,
         //RULES.Images,

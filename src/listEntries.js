@@ -18,15 +18,15 @@ export default function listEntries(src) {
             if(entry === undefined)
                 entry = entries[entry_name]= { import: []};
 
-            const isSkeleton = entry_name.startsWith("skeleton");
+            const isTemplate = entry_name.startsWith("templates");
             const isWebPage  = file.endsWith('.html');
             
-            if( isWebPage && ! isSkeleton) {
+            if( isWebPage && ! isTemplate) {
 
-                //let dependsOn = "skeleton"; // default.
+                //let dependsOn = "template"; // default.
                 const content = fs.readFileSync(file, {encoding: "utf8"});
                 
-                const found = content.match(/src="\/(skeleton\/(.*))index.js"/);
+                const found = content.match(/src="\/(templates\/(.*))index.js"/);
                 if( found !== null) {
                     const r = found[1].slice(0,-1);
                     entry.dependOn = [r];

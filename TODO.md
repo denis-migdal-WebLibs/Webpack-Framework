@@ -1,17 +1,10 @@
-- skeleton
-- cmd
-- TS extends
-- test libs
+- github pages CI/CD (add).
+  - exclude pages/tests from production.
+
+- use tsup (or equiv) to generate libraries .d.ts files.
+  - tsup src/index.ts --dts --emitDeclarationOnly ?
+
 - /tests : own configuration
-- tsup.
-
-⚠ .vscode + .github missing
-
-//TODO: .d.ts bundle
-// outil externe (?).
-// tsup src/index.ts --dts --emitDeclarationOnly ?
-
-//TODO: multiple named target.
 
 ## ---------------
 

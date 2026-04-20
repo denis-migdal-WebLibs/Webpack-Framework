@@ -3,9 +3,9 @@
 WF_ROOT=$(dirname "$0")
 echo "* Found WebpackFramework root: $WF_ROOT"
 
-cp -rn "$WF_ROOT/template/default/"{*,.[^.]*} ./
+cp --update=none -r "$WF_ROOT/template/default/"{*,.[^.]*} ./
 
-mkdir dist src
+mkdir dist
 
 git add .gitignore
 npm install

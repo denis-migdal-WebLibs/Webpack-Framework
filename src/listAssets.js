@@ -9,12 +9,8 @@ export default function listAssets(src) {
     for(let i = 0; i < res.length; ++i)
         assets.push([res[i], "./" + res[i].slice(`${src}/pages`.length) ]);
 
-    if( fs.existsSync(`${src}/assets`) )
-        assets.push([`${src}/assets`, "./assets"]);
-
-    if( fs.existsSync(`${src}/pages/404.html`) ) {
+    if( fs.existsSync(`${src}/pages/404.html`) )
         assets.push([`${src}/pages/404.html`, `./404.html`]);
-    }
 
     return assets;
 }
