@@ -1,5 +1,5 @@
 - github pages CI/CD (add).
-  - exclude pages/tests from production.
+  - exclude pages/tests + src/libs/tests from production.
 
 - plugin to emit lists (that can then be used by indexes).
 
