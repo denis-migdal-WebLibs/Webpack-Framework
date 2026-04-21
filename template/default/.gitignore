@@ -2,3 +2,4 @@ build/TS
 node_modules/
 package-lock.json
 dist/
+*.bkp
