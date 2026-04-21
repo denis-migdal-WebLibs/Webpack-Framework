@@ -14,7 +14,8 @@
         "build"     : "clear ; webpack --no-watch --mode=development",
         "watch"     : "clear ; webpack --watch    --mode=development",
         "build-prod": "clear ; webpack --no-watch --mode=production",
-        "tests"     : "clear ; "
+        "tests"     : "clear ; deno task --cwd ./tests test",
+        "types"     : "clear ; ./build/WebpackFramework/files/genTypes.sh"
     },
     "dependencies": {},
     "devDependencies": {

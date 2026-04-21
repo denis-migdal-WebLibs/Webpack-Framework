@@ -1,11 +1,6 @@
 - github pages CI/CD (add).
   - exclude pages/tests from production.
 
-- use tsup (or equiv) to generate libraries .d.ts files.
-  - dts-bundle-generator --export-referenced-types false -o ./index.d.ts src/libs/index.ts
-    -> script to list + generate (?).
-  - tsup src/index.ts --dts --emitDeclarationOnly ?
-
 - plugin to emit lists (that can then be used by indexes).
 
 - webpages tests (?)
