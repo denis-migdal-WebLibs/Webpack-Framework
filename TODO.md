@@ -8,14 +8,13 @@
 ## TS config
 
 - `noErrorTruncation`: printing errors, change it if necessary.
+- `"declaration": false`: do not generate .d.ts files.
 
 ### Potential issues :
 
 - remove: `"allowSyntheticDefaultImports": true`,
 - added: `"erasableSyntaxOnly": true`,
 - added: `"noUncheckedSideEffectImports": true`
-- added: `"declaration": true` => try to be compatible as much as possible (to have decl. merge).
-
 ## Markdown
 
 Avoid using markdown.
