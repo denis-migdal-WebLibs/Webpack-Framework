@@ -9,7 +9,7 @@
         "outDir": "./build/TS",
 
         "paths": {
-            "@/*": ["./src/*"]
+            "[NAME]@[VERSION]/": ["./src/*"]
         }
     }
 }

@@ -1,3 +1,3 @@
-import {sayHello} from "@/pages/templates/";
+import {sayHello} from "[NAME]@[VERSION]/pages/templates/";
 
 sayHello();

@@ -4,6 +4,6 @@
     },
     "imports": {
         "std/assert": "jsr:@std/assert",
-        "@/"        : "../dist/dev/libs/"
+        "[NAME]@[VERSION]/": "../dist/dev/libs/"
     }
 }
