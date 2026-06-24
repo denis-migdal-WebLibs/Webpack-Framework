@@ -20,7 +20,7 @@ export default function(config, src, _, {ROOT, alias}) {
 		// raw loading...
 		{
 			//TODO: minify (?).
-			test  : /\.(html|css)$/,
+			test  : /\.(html|css|txt)$/,
 			issuer: /\.ts$/,
 			type  : 'asset/source',
 		}
