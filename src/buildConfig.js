@@ -3,6 +3,10 @@ import webpack from 'webpack';
 import copyAssets  from './copyAssets.js';
 import pageEntries from './listEntries.js';
 
+import path from "path";
+import { fileURLToPath } from "node:url";
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
 //import { library } from 'webpack';
 //const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
 //const genCoreModuleList  = require('./genCoreModuleList');
@@ -14,6 +18,8 @@ export default function (src, dst, rules = [], options = {}) {
 
 	let ROOT = process.cwd();
 	options.ROOT = ROOT;
+
+	const __DEBUG__ = options.mode !== "production";
 
 	let config = {
 		module: {
@@ -32,8 +38,12 @@ export default function (src, dst, rules = [], options = {}) {
 		},
 		target: "web",
         plugins: [
+			new webpack.ProvidePlugin({
+				assert: [path.resolve(__dirname, "../providers/assert.ts"), "assert"]
+			}),
 			new webpack.DefinePlugin({
-				__DEBUG__      : options.mode !== "production",
+				__ASSERT__     : `${__DEBUG__} && assert`,
+				__DEBUG__,
 				__LOAD_FILE__  : "require"
 			}),
 			/*{
