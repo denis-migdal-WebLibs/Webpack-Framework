@@ -5,7 +5,7 @@ export default function listAssets(src) {
 
     const assets = [];
 
-    const res = globSync(src + '/pages/**/assets/*', {dotRelative: true});
+    const res = globSync(src + '/pages/**/{,@}assets/*', {dotRelative: true});
     for(let i = 0; i < res.length; ++i)
         assets.push([res[i], "./" + res[i].slice(`${src}/pages`.length) ]);
 
