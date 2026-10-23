@@ -11,6 +11,8 @@ Directories:
 - `template/default`: the default template (copied into the new project).
 - `src/rules`: tells Webpack how to load ressources.
 - `src/loaders`: custom loaders (not used).
+- `providers`: implementation of global debug functions.
+- `files`: used to generate .d.ts files.
 
 Files:
 ------

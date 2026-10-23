@@ -1,9 +1,7 @@
 - github pages CI/CD (add).
-  - exclude pages/tests + src/libs/tests from production.
-
+  - exclude ./src/pages/tests + ./tests from production.
+- build/TS => build/cache/TS
 - plugin to emit lists (that can then be used by indexes).
-
-- webpages tests (?)
 
 ## TS config
 
@@ -15,6 +13,7 @@
 - remove: `"allowSyntheticDefaultImports": true`,
 - added: `"erasableSyntaxOnly": true`,
 - added: `"noUncheckedSideEffectImports": true`
+
 ## Markdown
 
 Avoid using markdown.
