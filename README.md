@@ -50,9 +50,9 @@ I use the following structure in my projects:
 My `src` directory is structured as follow:
 ```shell
 src
-├─ @exports         # exported public symbols
 ├─ @contracts       # define contracts and services.
 ├─ modules          # implements contracts (mainly for MWL).
+|  ├─ @types        # re-usable TS helpers
 |  └─ @platform     # browser API, stores, codecs, etc.
 ├─ models           # entities, data structures, rules.
 ├─ webui            # used by templates.
