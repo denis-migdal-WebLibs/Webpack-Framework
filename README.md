@@ -50,11 +50,10 @@ I use the following structure in my projects:
 My `src` directory is structured as follow:
 ```shell
 src
-├─ @contracts       # define contracts and services.
-├─ modules          # implements contracts (mainly for MWL).
+├─ modules          #
 |  ├─ @types        # re-usable TS helpers
 |  └─ @platform     # browser API, stores, codecs, etc.
-├─ models           # entities, data structures, rules.
+├─ models           # entities, data structures, rules, codecs.
 ├─ webui            # used by templates.
 |  ├─ widgets       # 
 |  ├─ orchestrators # ~ pages controllers
