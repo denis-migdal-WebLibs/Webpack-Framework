@@ -70,4 +70,19 @@ src
 
 Directories prefixed by `@` have a "structural" meaning distinct from the current context. For example in the `src/webui/widgets` directory, each subdirectory represents a Widget, except `@core` which contains code used to define/create Widgets.
 
-💡 We prefers ./src/@exports to ./src/libs, as generating TS libs requires emissions of .d.ts files, that still have open issues in TS...
+### Modules
+
+```shell
+module
+├─ @contract
+|  ├─ @types   # define types
+|  ├─ services
+|  ├─ extensions
+|  └─ index.ts # Define the module services, details, and extensions.
+├─ @impl       # Implements details and instantiate extensions.
+└─ index.ts    # Exports @impl/, @contract/@types, and @contract/services.
+```
+
+- controller : an API hidden behind a symbol. This is used when we want to provide features without polluting the object API.
+- functions : its parameters must not depends on a specific implementation. This means that services likely need to redirect calls to a controller.
+- brand : hide implementation details while ensuring their existence.
